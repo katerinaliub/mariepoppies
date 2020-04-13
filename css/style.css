@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "Abril";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../assets/fonts/Abril/Abril-Regular/Abril-Regular.eot?") format("eot"), url("../assets/fonts/Abril/Abril-Regular/Abril-Regular.woff2") format("woff2"), url("../assets/fonts/Abril/Abril-Regular/Abril-Regular.woff") format("woff"), url("../assets/fonts/Abril/Abril-Regular/Abril-Regular.ttf") format("truetype"), url("../assets/fonts/Abril/Abril-Regular/Abril-Regular.svg#Abril") format("svg"); }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+
+body {
+  box-sizing: border-box;
+  font-family: "Abril", sans-serif;
+  font-size: 1.8rem; }
