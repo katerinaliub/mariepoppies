@@ -1,0 +1,21 @@
+.container {
+  margin-top: -170px;
+}
+
+.section1 {
+  position: relative;
+  height: 100vh;
+  background-image: url(../assets/img/bg-section-1.jpg);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__text-box {
+    position: absolute;
+    max-width: 60rem;
+    top: calc(50% + 85px);
+    transform: translateY(-50%);
+
+  }
+}

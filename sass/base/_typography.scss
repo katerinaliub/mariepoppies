@@ -26,4 +26,15 @@ body {
   box-sizing: border-box;
   font-family: $font-default;
   font-size: $font-size-default;
+  color: $color-text;
+}
+
+.heading-primary {
+  font-weight: normal;
+  letter-spacing: .3rem;
+  font-size: 4rem;
+
+  &__bold {
+    font-family: $font-heading;
+  }
 }

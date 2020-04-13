@@ -4,6 +4,12 @@
   font-weight: normal;
   src: url("../assets/fonts/Abril/Abril-Regular/Abril-Regular.eot?") format("eot"), url("../assets/fonts/Abril/Abril-Regular/Abril-Regular.woff2") format("woff2"), url("../assets/fonts/Abril/Abril-Regular/Abril-Regular.woff") format("woff"), url("../assets/fonts/Abril/Abril-Regular/Abril-Regular.ttf") format("truetype"), url("../assets/fonts/Abril/Abril-Regular/Abril-Regular.svg#Abril") format("svg"); }
 
+@font-face {
+  font-family: "Abril-Fatface";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../assets/fonts/Abril/Abril-Fatface/Abril-Fatface.eot?") format("eot"), url("../assets/fonts/Abril/Abril-Fatface/Abril-Fatface.woff2") format("woff2"), url("../assets/fonts/Abril/Abril-Fatface/Abril-Fatface.woff") format("woff"), url("../assets/fonts/Abril/Abril-Fatface/Abril-Fatface.ttf") format("truetype"), url("../assets/fonts/Abril/Abril-Fatface/Abril-Fatface.svg#Abril-Fatface") format("svg"); }
+
 *,
 *::after,
 *::before {
@@ -26,4 +32,76 @@ html {
 body {
   box-sizing: border-box;
   font-family: "Abril", sans-serif;
-  font-size: 1.8rem; }
+  font-size: 1.6rem;
+  color: #333; }
+
+.heading-primary {
+  font-weight: normal;
+  letter-spacing: .3rem;
+  font-size: 4rem; }
+  .heading-primary__bold {
+    font-family: "Abril-Fatface", "Abril", sans-serif; }
+
+.u-img-responsive {
+  display: block;
+  max-width: 100%; }
+
+.nav {
+  list-style: none;
+  font-size: 1.4rem; }
+  .nav__item {
+    display: inline-block; }
+    .nav__item:not(:first-child) {
+      margin-left: 3.5rem; }
+  .nav__link:link, .nav__link:visited {
+    color: #333;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .4s; }
+  .nav__link:hover, .nav__link:active {
+    color: #EEAA9C; }
+
+.row {
+  position: relative;
+  max-width: 114rem;
+  width: 100%; }
+
+.header {
+  display: flex;
+  background-color: rgba(238, 238, 238, 0.6);
+  max-width: 114rem;
+  margin: 50px auto 0;
+  padding: 35px 30px;
+  position: relative;
+  z-index: 10; }
+  .header__wrap {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    min-height: 50px; }
+  .header__logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    max-height: 50px; }
+
+.container {
+  margin-top: -170px; }
+
+.section1 {
+  position: relative;
+  height: 100vh;
+  background-image: url(../assets/img/bg-section-1.jpg);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .section1__text-box {
+    position: absolute;
+    max-width: 60rem;
+    top: calc(50% + 85px);
+    transform: translateY(-50%); }
