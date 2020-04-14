@@ -1,0 +1,118 @@
+.hiw {
+
+  &__slide {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    outline: none;
+    margin-top: 4rem;
+    @include respond(phone) {
+      flex-direction: column;
+    }
+  }
+
+  &__left {
+    width: 30%;
+    @include respond(phone) {
+      width: 100%;
+    }
+  }
+
+  &__right {
+    width: 50%;
+    @include respond(phone) {
+      width: 100%;
+    }
+  }
+
+  &__step {
+    color: $color-primary;
+    font-size: 2.4rem;
+    margin-bottom: 2.5rem;
+  }
+
+  &__title {
+    font-size: 2.4rem;
+    font-family: $font-heading;
+    margin-bottom: .5rem;
+  }
+
+  &__description {
+    letter-spacing: .8px;
+    margin-bottom: 2.5rem;
+  }
+
+  &__hours {
+    font-style: italic;
+    font-weight: 600;
+  }
+
+  &__image {
+
+  }
+  
+  &__bg-number {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    z-index: -1;
+    overflow: hidden;
+    transform: translateY(-50%);
+    width: auto;
+    font-size: 16rem;
+    font-family: $font-heading;
+    color: rgba($color-primary, .2);
+
+    @include respond(phone) {
+      display: none;
+    }
+  }
+
+  &__button {
+    border-radius: 50%;
+    background-color: white;
+    width: 5rem;
+    height: 5rem;
+    font-size: 2rem;
+    font-family: $font-default;
+    border-width: 0;
+    color: $color-primary;
+    box-shadow: 0 1.5rem 4rem rgba($color-text, .2);
+    outline: none;
+    transition: all .2s;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      color: $color-white;
+      background-color: $color-primary;
+
+      @media (hover: none) and (pointer: coarse) {
+        color: $color-primary;
+        background-color: $color-white;
+      }
+    }
+  }
+
+  .slick-dots {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+
+    li{
+
+      &:not(:last-child) {
+        margin-right: 2rem;
+      }
+
+      &.slick-active .hiw__button{
+        color: $color-white;
+        background-color: $color-primary;
+      }
+    }
+  }
+
+}

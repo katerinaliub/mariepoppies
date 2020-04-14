@@ -10,6 +10,12 @@
   font-weight: normal;
   src: url("../assets/fonts/Abril/Abril-Fatface/Abril-Fatface.eot?") format("eot"), url("../assets/fonts/Abril/Abril-Fatface/Abril-Fatface.woff2") format("woff2"), url("../assets/fonts/Abril/Abril-Fatface/Abril-Fatface.woff") format("woff"), url("../assets/fonts/Abril/Abril-Fatface/Abril-Fatface.ttf") format("truetype"), url("../assets/fonts/Abril/Abril-Fatface/Abril-Fatface.svg#Abril-Fatface") format("svg"); }
 
+@font-face {
+  font-family: "Abril";
+  font-style: italic;
+  font-weight: 600;
+  src: url("../assets/fonts/Abril/Abril-Semibold-Italic/Abril-Semibold-Italic.eot?") format("eot"), url("../assets/fonts/Abril/Abril-Semibold-Italic/Abril-Semibold-Italic.woff2") format("woff2"), url("../assets/fonts/Abril/Abril-Semibold-Italic/Abril-Semibold-Italic.woff") format("woff"), url("../assets/fonts/Abril/Abril-Semibold-Italic/Abril-Semibold-Italic.ttf") format("truetype"), url("../assets/fonts/Abril/Abril-Semibold-Italic/Abril-Semibold-Italic.svg#Abril") format("svg"); }
+
 *,
 *::after,
 *::before {
@@ -42,9 +48,117 @@ body {
   .heading-primary__bold {
     font-family: "Abril-Fatface", "Abril", sans-serif; }
 
+.heading-secondary {
+  font-size: 4.6rem;
+  font-family: "Abril-Fatface", "Abril", sans-serif;
+  font-weight: normal;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4rem; }
+  @media only screen and (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 3.6rem; } }
+  .heading-secondary:before {
+    content: "";
+    display: block;
+    border-bottom: 2px solid #EEAA9C;
+    width: 5rem;
+    margin-bottom: 2rem; }
+
 .u-img-responsive {
   display: block;
   max-width: 100%; }
+
+.hiw__slide {
+  display: flex !important;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  outline: none;
+  margin-top: 4rem; }
+  @media only screen and (max-width: 37.5em) {
+    .hiw__slide {
+      flex-direction: column; } }
+
+.hiw__left {
+  width: 30%; }
+  @media only screen and (max-width: 37.5em) {
+    .hiw__left {
+      width: 100%; } }
+
+.hiw__right {
+  width: 50%; }
+  @media only screen and (max-width: 37.5em) {
+    .hiw__right {
+      width: 100%; } }
+
+.hiw__step {
+  color: #EEAA9C;
+  font-size: 2.4rem;
+  margin-bottom: 2.5rem; }
+
+.hiw__title {
+  font-size: 2.4rem;
+  font-family: "Abril-Fatface", "Abril", sans-serif;
+  margin-bottom: .5rem; }
+
+.hiw__description {
+  letter-spacing: .8px;
+  margin-bottom: 2.5rem; }
+
+.hiw__hours {
+  font-style: italic;
+  font-weight: 600; }
+
+.hiw__bg-number {
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  z-index: -1;
+  overflow: hidden;
+  transform: translateY(-50%);
+  width: auto;
+  font-size: 16rem;
+  font-family: "Abril-Fatface", "Abril", sans-serif;
+  color: rgba(238, 170, 156, 0.2); }
+  @media only screen and (max-width: 37.5em) {
+    .hiw__bg-number {
+      display: none; } }
+
+.hiw__button {
+  border-radius: 50%;
+  background-color: white;
+  width: 5rem;
+  height: 5rem;
+  font-size: 2rem;
+  font-family: "Abril", sans-serif;
+  border-width: 0;
+  color: #EEAA9C;
+  box-shadow: 0 1.5rem 4rem rgba(51, 51, 51, 0.2);
+  outline: none;
+  transition: all .2s;
+  cursor: pointer; }
+  .hiw__button:hover, .hiw__button:focus {
+    color: #fff;
+    background-color: #EEAA9C; }
+    @media (hover: none) and (pointer: coarse) {
+      .hiw__button:hover, .hiw__button:focus {
+        color: #EEAA9C;
+        background-color: #fff; } }
+
+.hiw .slick-dots {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem; }
+  .hiw .slick-dots li:not(:last-child) {
+    margin-right: 2rem; }
+  .hiw .slick-dots li.slick-active .hiw__button {
+    color: #fff;
+    background-color: #EEAA9C; }
 
 .nav {
   list-style: none;
@@ -67,7 +181,11 @@ body {
 .row {
   position: relative;
   max-width: 114rem;
-  width: 100%; }
+  width: 100%;
+  margin: 0 auto; }
+  @media only screen and (max-width: 37.5em) {
+    .row {
+      padding: 1.5rem; } }
 
 .header {
   display: flex;
@@ -136,3 +254,6 @@ body {
         right: 5%;
         max-width: unset;
         text-align: center; } }
+
+.section2 {
+  padding: 10rem 0; }
