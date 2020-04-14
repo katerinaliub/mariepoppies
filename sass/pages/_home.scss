@@ -1,5 +1,13 @@
 .container {
   margin-top: -170px;
+
+  @include respond(tab-land) {
+    margin-top: -130px;
+  }
+
+  @include respond(phone) {
+    margin-top: -75px;
+  }
 }
 
 .section1 {
@@ -7,15 +15,27 @@
   height: 100vh;
   background-image: url(../assets/img/bg-section-1.jpg);
   background-size: cover;
+  background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
 
   &__text-box {
     position: absolute;
-    max-width: 60rem;
+    max-width: 80rem;
     top: calc(50% + 85px);
     transform: translateY(-50%);
 
+    @include respond(tab-land) {
+      top: calc(50% + 65px);
+      left: 5%;
+    }
+
+    @include respond(phone) {
+      top: calc(50% + 37.5px);
+      right: 5%;
+      max-width: unset;
+      text-align: center;
+    }
   }
 }

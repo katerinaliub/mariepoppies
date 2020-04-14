@@ -2,6 +2,10 @@
   list-style: none;
   font-size: 1.4rem;
 
+  @include respond(phone) {
+    display: none;
+  }
+
   &__item {
     display: inline-block;
 

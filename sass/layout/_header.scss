@@ -7,6 +7,16 @@
   position: relative;
   z-index: 10;
 
+  @include respond(tab-land) {
+    padding: 15px;
+    max-width: 90%;
+  }
+
+  @include respond(phone) {
+    margin-top: 25px;
+    padding: 0 15px;
+  }
+
   &__wrap {
     width: 100%;
     display: flex;
@@ -16,6 +26,12 @@
     flex-wrap: wrap;
     position: relative;
     min-height: 50px;
+  }
+
+  &__info {
+    @include respond(phone) {
+      display: none;
+    }
   }
 
   &__logo {

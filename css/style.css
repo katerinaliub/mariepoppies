@@ -38,7 +38,7 @@ body {
 .heading-primary {
   font-weight: normal;
   letter-spacing: .3rem;
-  font-size: 4rem; }
+  font-size: 3.5rem; }
   .heading-primary__bold {
     font-family: "Abril-Fatface", "Abril", sans-serif; }
 
@@ -49,6 +49,9 @@ body {
 .nav {
   list-style: none;
   font-size: 1.4rem; }
+  @media only screen and (max-width: 37.5em) {
+    .nav {
+      display: none; } }
   .nav__item {
     display: inline-block; }
     .nav__item:not(:first-child) {
@@ -74,6 +77,14 @@ body {
   padding: 35px 30px;
   position: relative;
   z-index: 10; }
+  @media only screen and (max-width: 75em) {
+    .header {
+      padding: 15px;
+      max-width: 90%; } }
+  @media only screen and (max-width: 37.5em) {
+    .header {
+      margin-top: 25px;
+      padding: 0 15px; } }
   .header__wrap {
     width: 100%;
     display: flex;
@@ -83,6 +94,9 @@ body {
     flex-wrap: wrap;
     position: relative;
     min-height: 50px; }
+  @media only screen and (max-width: 37.5em) {
+    .header__info {
+      display: none; } }
   .header__logo {
     position: absolute;
     left: 50%;
@@ -91,17 +105,34 @@ body {
 
 .container {
   margin-top: -170px; }
+  @media only screen and (max-width: 75em) {
+    .container {
+      margin-top: -130px; } }
+  @media only screen and (max-width: 37.5em) {
+    .container {
+      margin-top: -75px; } }
 
 .section1 {
   position: relative;
   height: 100vh;
   background-image: url(../assets/img/bg-section-1.jpg);
   background-size: cover;
+  background-position: center;
   display: flex;
   justify-content: center;
   align-items: center; }
   .section1__text-box {
     position: absolute;
-    max-width: 60rem;
+    max-width: 80rem;
     top: calc(50% + 85px);
     transform: translateY(-50%); }
+    @media only screen and (max-width: 75em) {
+      .section1__text-box {
+        top: calc(50% + 65px);
+        left: 5%; } }
+    @media only screen and (max-width: 37.5em) {
+      .section1__text-box {
+        top: calc(50% + 37.5px);
+        right: 5%;
+        max-width: unset;
+        text-align: center; } }
