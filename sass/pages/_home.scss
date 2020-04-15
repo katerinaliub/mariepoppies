@@ -156,3 +156,70 @@
     flex-direction: column;
   }
 }
+
+.section5 {
+  padding: 15rem 0;
+  @include respond(tab-port) {
+    padding: 5rem 0;
+  }
+
+  @include respond(phone) {
+    padding: 1.5rem 0;
+  }
+}
+
+.partners {
+  display: flex;
+  text-align: right;
+  align-items: center;
+
+  @include respond(phone) {
+    text-align: left;
+    flex-direction: column;
+  }
+
+  &__left {
+    flex-basis: 50%;
+    padding: 0 7rem 4rem 4rem;
+
+    @include respond(tab-port) {
+      padding: 0 4rem 2rem 2rem;
+    }
+
+    @include respond(phone) {
+      padding: 2rem;
+    }
+  }
+
+  &__right {
+    flex-basis: 50%;
+    border: 3px solid $color-primary;
+    position: relative;
+    margin-right: 5rem;
+    @include respond(tab-port) {
+      margin-right: 3rem;
+    }
+
+    @include respond(phone) {
+      margin-right: 0;
+    }
+  }
+
+  &__image {
+    position: relative;
+    top:-5rem;
+    left: 5rem;
+
+    @include respond(tab-port) {
+      top:-3rem;
+      left: 3rem;
+    }
+
+    @include respond(phone) {
+      top: 0;
+      left: 0;
+      padding: 1.5rem;
+    }
+  }
+}
+

@@ -175,6 +175,23 @@
                 </div>
             </div>
         </section>
+
+        <section class="section5">
+            <div class="row">
+                <div class="partners">
+                    <div class="partners__left">
+                        <h2 class="heading-secondary heading-secondary--right">
+                            Nos producteurs partenaires
+                        </h2>
+                        <p class="paragraph">10 producteurs belges engagés et talentueux ont rejoint l’aventure et sont partenaires du projet. Chaque semaine, ces amoureux de la nature nous proposent de magnifiques fleurs ornementales qui embelliront votre intérieur.</p>
+                        <p class="paragraph">Cycle Farmers | Jardin des sens | Le Monde des Milles Couleurs | Les fleurs de Mag | Jean-Pierre de Leener | Duizendblad | Les Généreuses | De kleur van hier en nu | Bio Bloom</p>
+                    </div>
+                    <div class="partners__right">
+                        <img src="assets/img/flowers-on-table.jpg" alt="Flowers On Table" class="partners__image u-img-responsive">
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <script
@@ -210,7 +227,7 @@
         $(window).scroll(testScroll);
 
         function testScroll() {
-            if ($(".section3").isInViewport()) {
+            if ($(".section4").isInViewport()) {
                 $('.counter__number').each(function () {
                     $(this).prop('Counter',0).animate({
                         Counter: $(this).data('count')

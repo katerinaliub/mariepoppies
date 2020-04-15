@@ -57,13 +57,19 @@ body {
   justify-content: center;
   align-items: center;
   margin-bottom: 4rem; }
+  .heading-secondary--right {
+    align-items: flex-end; }
+    @media only screen and (max-width: 37.5em) {
+      .heading-secondary--right {
+        align-items: center;
+        text-align: center; } }
   @media only screen and (max-width: 37.5em) {
     .heading-secondary {
       font-size: 3.6rem; } }
   .heading-secondary:before {
     content: "";
     display: block;
-    border-bottom: 2px solid #EEAA9C;
+    border-bottom: 3px solid #EEAA9C;
     width: 5rem;
     margin-bottom: 2rem; }
 
@@ -383,3 +389,54 @@ body {
   @media only screen and (max-width: 37.5em) {
     .counter-wrapper {
       flex-direction: column; } }
+
+.section5 {
+  padding: 15rem 0; }
+  @media only screen and (max-width: 56.25em) {
+    .section5 {
+      padding: 5rem 0; } }
+  @media only screen and (max-width: 37.5em) {
+    .section5 {
+      padding: 1.5rem 0; } }
+
+.partners {
+  display: flex;
+  text-align: right;
+  align-items: center; }
+  @media only screen and (max-width: 37.5em) {
+    .partners {
+      text-align: left;
+      flex-direction: column; } }
+  .partners__left {
+    flex-basis: 50%;
+    padding: 0 7rem 4rem 4rem; }
+    @media only screen and (max-width: 56.25em) {
+      .partners__left {
+        padding: 0 4rem 2rem 2rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .partners__left {
+        padding: 2rem; } }
+  .partners__right {
+    flex-basis: 50%;
+    border: 3px solid #EEAA9C;
+    position: relative;
+    margin-right: 5rem; }
+    @media only screen and (max-width: 56.25em) {
+      .partners__right {
+        margin-right: 3rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .partners__right {
+        margin-right: 0; } }
+  .partners__image {
+    position: relative;
+    top: -5rem;
+    left: 5rem; }
+    @media only screen and (max-width: 56.25em) {
+      .partners__image {
+        top: -3rem;
+        left: 3rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .partners__image {
+        top: 0;
+        left: 0;
+        padding: 1.5rem; } }
