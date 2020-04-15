@@ -1,0 +1,20 @@
+.counter {
+  text-align: center;
+  align-content: center;
+
+  &:not(:last-child) {
+    @include respond(phone) {
+      margin-bottom: 6rem;
+    }
+  }
+
+  &__value {
+    color: $color-primary;
+    font-size: 9rem;
+  }
+
+  &__title {
+    font-size: 2.4rem;
+    letter-spacing: .8px;
+  }
+}

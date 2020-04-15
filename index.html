@@ -136,10 +136,44 @@
                         <div class="hiw__bg-number">05</div>
                     </div>
                 </div>
-
             </div>
+        </section>
 
+        <section class="section4">
+            <div class="row">
+                <div class="counter-wrapper">
+                    <div class="counter">
+                        <div class="counter__value">
+                            <span class="counter__number" data-count="10">0</span>
+                            <span class="counter__unit"></span>
+                        </div>
+                        <p class="counter__title">Producers</p>
+                    </div>
+                    <div class="counter">
+                        <div class="counter__value">
+                            <span class="counter__number" data-count="32">0</span>
+                            <span class="counter__unit"></span>
+                        </div>
+                        <p class="counter__title">Florists</p>
+                    </div>
 
+                    <div class="counter">
+                        <div class="counter__value">
+                            <span class="counter__number" data-count="5">0</span>
+                            <span class="counter__unit"></span>
+                        </div>
+                        <p class="counter__title">Awards Won</p>
+                    </div>
+
+                    <div class="counter">
+                        <div class="counter__value">
+                            <span class="counter__number" data-count="100" >0</span>
+                            <span class="counter__unit">%</span>
+                        </div>
+                        <p class="counter__title">Satisfied Clients</p>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -161,6 +195,36 @@
             autoplay: true,
             autoplaySpeed: 2000
         });
+
+        $.fn.isInViewport = function () {
+            let elementTop = $(this).offset().top;
+            let elementBottom = elementTop + $(this).outerHeight();
+
+            let viewportTop = $(window).scrollTop();
+            let viewportBottom = viewportTop + $(window).height();
+
+            return elementBottom > viewportTop && elementTop < viewportBottom;
+        };
+
+        testScroll();
+        $(window).scroll(testScroll);
+
+        function testScroll() {
+            if ($(".section3").isInViewport()) {
+                $('.counter__number').each(function () {
+                    $(this).prop('Counter',0).animate({
+                        Counter: $(this).data('count')
+                    }, {
+                        duration: 2000,
+                        easing: 'swing',
+                        step: function (now) {
+                            $(this).text(Math.ceil(now));
+                        }
+                    });
+                });
+            }
+        }
+
     </script>
 
 </body>
