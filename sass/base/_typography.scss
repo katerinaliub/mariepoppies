@@ -62,3 +62,35 @@ body {
     margin-bottom: 2rem;
   }
 }
+
+.heading-tertiary {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: normal;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 4rem;
+
+  &:after {
+    content: "";
+    display: block;
+    border-bottom: 3px solid $color-primary;
+    width: 5rem;
+    margin-top: 1rem;
+  }
+}
+
+.paragraph {
+  font-size: $font-size-default;
+  line-height: 1.6;
+
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}
+
+.italic {
+  font-style: italic;
+  font-weight: 600;
+}

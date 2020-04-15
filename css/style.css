@@ -67,6 +67,31 @@ body {
     width: 5rem;
     margin-bottom: 2rem; }
 
+.heading-tertiary {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: normal;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 4rem; }
+  .heading-tertiary:after {
+    content: "";
+    display: block;
+    border-bottom: 3px solid #EEAA9C;
+    width: 5rem;
+    margin-top: 1rem; }
+
+.paragraph {
+  font-size: 1.6rem;
+  line-height: 1.6; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
+
+.italic {
+  font-style: italic;
+  font-weight: 600; }
+
 .u-img-responsive {
   display: block;
   max-width: 100%; }
@@ -183,9 +208,9 @@ body {
   max-width: 114rem;
   width: 100%;
   margin: 0 auto; }
-  @media only screen and (max-width: 37.5em) {
+  @media only screen and (max-width: 56.25em) {
     .row {
-      padding: 1.5rem; } }
+      padding: 0 1.5rem; } }
 
 .header {
   display: flex;
@@ -256,4 +281,56 @@ body {
         text-align: center; } }
 
 .section2 {
-  padding: 10rem 0; }
+  padding: 20rem 0; }
+  @media only screen and (max-width: 56.25em) {
+    .section2 {
+      padding: 5rem 0; } }
+  @media only screen and (max-width: 37.5em) {
+    .section2 {
+      padding: 1.5rem 0; } }
+
+.main-info {
+  display: flex; }
+  @media only screen and (max-width: 56.25em) {
+    .main-info {
+      flex-direction: column; } }
+  .main-info__left {
+    flex-basis: 50%;
+    background-image: url("../assets/img/roses-in-basket.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%; }
+    @media only screen and (max-width: 56.25em) {
+      .main-info__left {
+        display: none; } }
+  .main-info__right {
+    flex-basis: 50%;
+    background-color: #f9f9f9;
+    padding: 4rem 4rem 4rem 7rem;
+    margin: 50px 0;
+    position: relative; }
+    @media only screen and (max-width: 56.25em) {
+      .main-info__right {
+        margin: 0;
+        padding: 3rem;
+        background-image: url("../assets/img/roses-in-basket.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        color: #fff; } }
+    @media only screen and (max-width: 56.25em) {
+      .main-info__right > * {
+        position: relative;
+        z-index: 10; } }
+    @media only screen and (max-width: 56.25em) {
+      .main-info__right:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(51, 51, 51, 0.6); } }
