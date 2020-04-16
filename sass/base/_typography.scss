@@ -105,3 +105,19 @@ body {
   font-style: italic;
   font-weight: 600;
 }
+
+.link {
+   color: $color-grey-text;
+  text-decoration: none;
+  transition: all .2s;
+
+  &:hover,
+  &:active {
+    color: $color-primary;
+  }
+}
+
+.copyright {
+  margin-top: 3rem;
+  color: $color-primary;
+}

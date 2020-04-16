@@ -235,13 +235,50 @@
                     </div>
                 </div>
         </section>
+
+<!--        <section class="section7">-->
+<!--            <div class="row">-->
+<!--                <div id="map" class="map">-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </section>-->
     </main>
+
+    <footer class="footer">
+        <p class="paragraph">Address: 4578 Marmora Road, Glasgow, D04 89GR </p>
+        <p class="paragraph">
+            <a class="link" href="tel:8001230045"> (800)123-0045</a>;
+            <a class="link" href="tel:8001230046">(800)123-0046</a>
+        </p>
+        <p class="paragraph">
+            <ul class="social-media">
+                <li class="social-media__item">
+                    <a href="https://github.com/katerinaliub" target="_blank" class="social-media__link">
+                        <svg class="social-media__icon">
+                            <use xlink:href="assets/img/sprite.svg#icon-facebook"> </use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social-media__item">
+                    <a href="https://www.linkedin.com/in/kateryna-liubarshchuk-802b4312a/" target="_blank" class="social-media__link">
+                        <svg class="social-media__icon">
+                            <use xlink:href="assets/img/sprite.svg#icon-instagram"> </use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </p>
+        <p class="copyright">© 2020 par Marrie Poppies</p>
+    </footer>
 
     <script
             src="https://code.jquery.com/jquery-3.4.1.min.js"
             integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
             crossorigin="anonymous"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<!--    <script async defer-->
+<!--            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_LV-s5n77qINLpBowXqSNDuvu8QjQmxg&callback=initMap">-->
+<!--    </script>-->
 
     <script>
         $("#hiw-slider").slick({
@@ -284,6 +321,20 @@
                 });
             }
         }
+
+        // function initMap() {
+        //     var geocoder = new google.maps.Geocoder();
+        //     var address = "1 Rue du Château";
+        //
+        //     geocoder.geocode( { 'address': address}, function(results, status) {
+        //         var latitude = results[0].geometry.location.lat();
+        //         var longitude = results[0].geometry.location.lng();
+        //         var location = {lat: latitude, lng: longitude};
+        //         var map = new google.maps.Map(
+        //             document.getElementById('map'), {zoom: 15, center: location});
+        //         var marker = new google.maps.Marker({position: location, map: map});
+        //     });
+        // }
 
     </script>
 

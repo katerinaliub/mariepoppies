@@ -100,6 +100,17 @@ body {
   font-style: italic;
   font-weight: 600; }
 
+.link {
+  color: #A4A499;
+  text-decoration: none;
+  transition: all .2s; }
+  .link:hover, .link:active {
+    color: #EEAA9C; }
+
+.copyright {
+  margin-top: 3rem;
+  color: #EEAA9C; }
+
 .u-img-responsive {
   display: block;
   max-width: 100%; }
@@ -324,6 +335,33 @@ body {
     transition: all .4s; }
   .nav__link:hover, .nav__link:active {
     color: #EEAA9C; }
+
+.social-media {
+  list-style: none;
+  display: inline-flex;
+  align-items: center; }
+  .social-media__item:not(:last-child) {
+    margin-right: 1rem; }
+  .social-media__link {
+    display: flex;
+    align-items: center;
+    transition: all .2s; }
+  .social-media__icon {
+    width: 2rem;
+    height: 2rem;
+    fill: #A4A499;
+    transition: all .2s; }
+  .social-media__link:hover .social-media__icon {
+    fill: #EEAA9C; }
+
+.footer {
+  background-color: #333;
+  padding: 5rem 0;
+  text-align: center;
+  color: #A4A499;
+  letter-spacing: 1px; }
+  .footer .paragraph:not(:last-child) {
+    margin-bottom: 1rem; }
 
 .row {
   position: relative;
@@ -554,3 +592,11 @@ body {
 .contact__form {
   max-width: 70rem;
   margin: 0 auto; }
+
+.section7 {
+  padding: 10rem 0; }
+
+.map {
+  height: 40rem;
+  max-height: 100vh;
+  border-radius: 4px; }

@@ -1,0 +1,13 @@
+.footer {
+  background-color: $color-text;
+  padding: 5rem 0;
+  text-align: center;
+  color: $color-grey-text;
+  letter-spacing: 1px;
+
+  .paragraph {
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+}
