@@ -49,9 +49,11 @@ body {
   justify-content: center;
   align-items: center;
   margin-bottom: 4rem;
+  text-align: center;
 
   &--right {
     align-items: flex-end;
+    text-align: right;
 
     @include respond(phone) {
       align-items: center;

@@ -127,7 +127,6 @@
     padding: 6rem 0;
   }
 
-
   &:before {
       content: "";
       display: block;
@@ -220,6 +219,22 @@
       left: 0;
       padding: 1.5rem;
     }
+  }
+}
+
+.section6 {
+  position: relative;
+  padding: 15rem 0;
+
+  @include respond(phone) {
+    padding: 6rem 0;
+  }
+}
+
+.contact {
+  &__form {
+    max-width: 70rem;
+    margin: 0 auto;
   }
 }
 
