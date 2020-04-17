@@ -20,13 +20,25 @@
             <div class="header__nav">
                 <ul class="nav">
                     <li class="nav__item">
-                        <a href="#contact" class="nav__link">Contacts</a>
+                        <a href="#contact" data-scroll class="nav__link">Contacts</a>
                     </li>
                     <li class="nav__item">
-                        <a href="#contact" class="nav__link">Contacts</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#contact" class="nav__link">Contacts</a>
+                        <ul class="social-media social-media--nav">
+                            <li class="social-media__item">
+                                <a href="https://www.facebook.com/MariePoppiesinBelgium/" target="_blank" class="social-media__link">
+                                    <svg class="social-media__icon">
+                                        <use xlink:href="assets/img/sprite.svg#icon-facebook"> </use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social-media__item">
+                                <a href="https://www.instagram.com/mariepoppiesinbelgium/" target="_blank" class="social-media__link">
+                                    <svg class="social-media__icon">
+                                        <use xlink:href="assets/img/sprite.svg#icon-instagram"> </use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </div>
@@ -193,7 +205,7 @@
             </div>
         </section>
 
-        <section class="section6">
+        <section class="section6" id="contact">
             <div class="bg-video">
                 <video class="bg-video__content" autoplay muted loop>
                     <source src="assets/img/video.mp4" type="video/mp4">
@@ -242,32 +254,37 @@
 <!--                </div>-->
 <!--            </div>-->
 <!--        </section>-->
+
+        <a href="#" id="scroll-up" data-scroll class="scroll-up">
+            <svg class="scroll-up__icon">
+                <use xlink:href="assets/img/sprite.svg#icon-chevron-up"> </use>
+            </svg>
+        </a>
     </main>
 
     <footer class="footer">
         <p class="paragraph">Address: 4578 Marmora Road, Glasgow, D04 89GR </p>
         <p class="paragraph">
-            <a class="link" href="tel:8001230045"> (800)123-0045</a>;
-            <a class="link" href="tel:8001230046">(800)123-0046</a>
+            Phone: <a class="link" href="tel:+32474096429"> +32 474 09 64 29</a>
         </p>
         <p class="paragraph">
             <ul class="social-media">
                 <li class="social-media__item">
-                    <a href="https://github.com/katerinaliub" target="_blank" class="social-media__link">
+                    <a href="https://www.facebook.com/MariePoppiesinBelgium/" target="_blank" class="social-media__link">
                         <svg class="social-media__icon">
                             <use xlink:href="assets/img/sprite.svg#icon-facebook"> </use>
                         </svg>
                     </a>
                 </li>
                 <li class="social-media__item">
-                    <a href="https://www.linkedin.com/in/kateryna-liubarshchuk-802b4312a/" target="_blank" class="social-media__link">
+                    <a href="https://www.instagram.com/mariepoppiesinbelgium/" target="_blank" class="social-media__link">
                         <svg class="social-media__icon">
                             <use xlink:href="assets/img/sprite.svg#icon-instagram"> </use>
                         </svg>
                     </a>
                 </li>
             </ul>
-        </p>
+         </p>
         <p class="copyright">© 2020 par Marrie Poppies</p>
     </footer>
 
@@ -276,11 +293,15 @@
             integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
             crossorigin="anonymous"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<!--    <script async defer-->
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@16.1.2/dist/smooth-scroll.min.js"></script>
+
+    <!--    <script async defer-->
 <!--            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_LV-s5n77qINLpBowXqSNDuvu8QjQmxg&callback=initMap">-->
 <!--    </script>-->
 
     <script>
+        new SmoothScroll('a[href*="#"]');
+
         $("#hiw-slider").slick({
             dots: true,
             customPaging: function(slider, i) {
@@ -320,7 +341,13 @@
                     });
                 });
             }
+            if ($(this).scrollTop() > 100) {
+                $('#scroll-up').fadeIn();
+            } else {
+                $('#scroll-up').fadeOut();
+            }
         }
+
 
         // function initMap() {
         //     var geocoder = new google.maps.Geocoder();

@@ -16,13 +16,31 @@
   }
 
   &__icon {
-    width: 2rem;
-    height: 2rem;
+    width: 1.6rem;
+    height: 1.6rem;
     fill: $color-grey-text;
     transition: all .2s;
   }
 
   &__link:hover &__icon {
+    fill: $color-primary;
+  }
+
+  &--nav {
+
+  }
+
+  &--nav &__item {
+    &:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+  }
+
+  &--nav &__icon {
+    fill: $color-text;
+  }
+
+  &--nav &__link:hover &__icon {
     fill: $color-primary;
   }
 }

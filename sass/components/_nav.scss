@@ -8,9 +8,10 @@
 
   &__item {
     display: inline-block;
+    vertical-align: middle;
 
     &:not(:first-child) {
-      margin-left: 3.5rem;
+      margin-left: 1.5rem;
     }
   }
 
