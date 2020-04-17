@@ -218,21 +218,21 @@
             <div class="row">
                 <div class="contact">
                         <h2 class="heading-secondary u-color-white">Envoyez-nous un message</h2>
-                        <form action="#" class="form contact__form">
+                        <form method="post" action="contact.php" class="form contact__form">
                             <div class="form__group form__group--2">
                                 <div class="form__group form__group--small">
-                                    <input type="text" class="form__input" placeholder="Nom" id="name" required>
+                                    <input type="text" class="form__input" placeholder="Nom" id="name" name="name" required>
                                     <label for="name" class="form__label">Nom</label>
                                 </div>
 
                                 <div class="form__group">
-                                    <input type="email" class="form__input form__group--small" placeholder="E-mail" id="email" required>
+                                    <input type="email" class="form__input form__group--small" placeholder="E-mail" name="email" id="email" required>
                                     <label for="email" class="form__label">E-mail</label>
                                 </div>
                             </div>
 
                             <div class="form__group">
-                                <input type="text" class="form__input" placeholder="Objet" id="subject">
+                                <input type="text" class="form__input" placeholder="Objet" id="subject" name="subject">
                                 <label for="name" class="form__label">Objet</label>
                             </div>
 
@@ -242,7 +242,7 @@
                             </div>
 
                             <div class="form__group">
-                                <button class="btn btn--primary">Envoyer</button>
+                                <button type="submit" class="btn btn--primary">Envoyer</button>
                             </div>
                         </form>
                     </div>
