@@ -1,3 +1,17 @@
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 @font-face {
   font-family: "Abril";
   font-style: normal;
@@ -44,7 +58,9 @@ body {
 .heading-primary {
   font-weight: normal;
   letter-spacing: .3rem;
-  font-size: 3.5rem; }
+  font-size: 3.5rem;
+  animation: moveInBottom 1s ease-out .25s;
+  animation-fill-mode: backwards; }
   .heading-primary__bold {
     font-family: "Abril-Fatface", "Abril", sans-serif; }
 
@@ -318,6 +334,40 @@ body {
     color: #fff;
     background-color: #EEAA9C; }
 
+.hiw--steps {
+  overflow: hidden; }
+
+.hiw--steps .hiw__slide {
+  margin-top: 0; }
+  @media only screen and (max-width: 37.5em) {
+    .hiw--steps .hiw__slide:not(:first-child) {
+      margin-top: 5rem; } }
+  .hiw--steps .hiw__slide:nth-child(even) {
+    flex-direction: row-reverse; }
+  .hiw--steps .hiw__slide:nth-child(odd) {
+    flex-direction: row; }
+  .hiw--steps .hiw__slide__right {
+    width: 60%; }
+  .hiw--steps .hiw__slide__left {
+    width: 40%; }
+
+.hiw--steps .hiw__slide .hiw__right {
+  width: 60%; }
+
+.hiw--steps .hiw__slide .hiw__left {
+  width: 40%; }
+
+.hiw--steps .hiw__slide:nth-child(even) .hiw__right {
+  text-align: right; }
+
+.hiw--steps .hiw__slide:nth-child(even) .hiw__bg-number {
+  left: unset;
+  right: 35%; }
+
+.hiw--steps .hiw__description,
+.hiw--steps .hiw__step {
+  margin-bottom: 1.5rem; }
+
 .nav {
   list-style: none;
   font-size: 1.4rem; }
@@ -405,7 +455,8 @@ body {
   margin: 50px auto 0;
   padding: 35px 30px;
   position: relative;
-  z-index: 10; }
+  z-index: 10;
+  animation: fadeIn .5s; }
   @media only screen and (max-width: 75em) {
     .header {
       padding: 15px;

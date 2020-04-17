@@ -6,6 +6,7 @@
   padding: 35px 30px;
   position: relative;
   z-index: 10;
+  animation: fadeIn .5s;
 
   @include respond(tab-land) {
     padding: 15px;

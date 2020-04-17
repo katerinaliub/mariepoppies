@@ -6,16 +6,17 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-
+<!--    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="image/png" href="assets/img/logo.png">
 
     <title>Marie Poppies</title>
 </head>
 <body>
     <header class="header">
         <div class="header__wrap">
-            <div class="header__info">A propos    Fleuristes   Producteurs</div>
+            <div class="header__info">A propos Fleuristes Producteurs</div>
             <img src="assets/img/logo.png" alt="Logo" class="header__logo"/>
             <div class="header__nav">
                 <ul class="nav">
@@ -82,8 +83,8 @@
                     Comment ça marche?
                 </h2>
 
-                <div id="hiw-slider" class="hiw">
-                    <div class="slide hiw__slide" title="1">
+                <div id="hiw-slider" class="hiw hiw--steps">
+                    <div class="slide hiw__slide" title="1" data-aos="fade-right" data-aos-offset="200">
                         <div class="hiw__left">
                             <img src="assets/img/hiw-slider/1.png" class="hiw__image u-img-responsive">
                         </div>
@@ -96,7 +97,7 @@
                         <div class="hiw__bg-number">01</div>
                     </div>
 
-                    <div class="slide hiw__slide" title="2">
+                    <div class="slide hiw__slide" title="2" data-aos="fade-left" data-aos-offset="100">
                         <div class="hiw__left">
                             <img src="assets/img/hiw-slider/2.png" class="hiw__image u-img-responsive">
                         </div>
@@ -109,7 +110,7 @@
                         <div class="hiw__bg-number">02</div>
                     </div>
 
-                    <div class="slide hiw__slide" title="3">
+                    <div class="slide hiw__slide" title="3" data-aos="fade-right" data-aos-offset="100">
                         <div class="hiw__left">
                             <img src="assets/img/hiw-slider/3.png" class="hiw__image u-img-responsive">
                         </div>
@@ -122,7 +123,7 @@
                         <div class="hiw__bg-number">03</div>
                     </div>
 
-                    <div class="slide hiw__slide" title="4">
+                    <div class="slide hiw__slide" title="4" data-aos="fade-left" data-aos-offset="100">
                         <div class="hiw__left">
                             <img src="assets/img/hiw-slider/4.png" class="hiw__image u-img-responsive">
                         </div>
@@ -135,7 +136,7 @@
                         <div class="hiw__bg-number">04</div>
                     </div>
 
-                    <div class="slide hiw__slide" title="5">
+                    <div class="slide hiw__slide" title="5" data-aos="fade-right" data-aos-offset="100" >
                         <div class="hiw__left">
                             <img src="assets/img/hiw-slider/5.png" class="hiw__image u-img-responsive">
                         </div>
@@ -285,15 +286,17 @@
                 </li>
             </ul>
          </p>
-        <p class="copyright">© 2020 par Marrie Poppies</p>
+        <p class="copyright">© 2020 par Marie Poppies</p>
     </footer>
 
     <script
             src="https://code.jquery.com/jquery-3.4.1.min.js"
             integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
             crossorigin="anonymous"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<!--    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>-->
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@16.1.2/dist/smooth-scroll.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
 
     <!--    <script async defer-->
 <!--            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_LV-s5n77qINLpBowXqSNDuvu8QjQmxg&callback=initMap">-->
@@ -301,18 +304,19 @@
 
     <script>
         new SmoothScroll('a[href*="#"]');
+        AOS.init();
 
-        $("#hiw-slider").slick({
-            dots: true,
-            customPaging: function(slider, i) {
-                return '<button class="tab hiw__button">' + $(slider.$slides[i]).attr('title') + '<i class="fa fa-sort-asc"></i></button>';
-            },
-            arrows: false,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 2000
-        });
+        // $("#hiw-slider").slick({
+        //     dots: true,
+        //     customPaging: function(slider, i) {
+        //         return '<button class="tab hiw__button">' + $(slider.$slides[i]).attr('title') + '<i class="fa fa-sort-asc"></i></button>';
+        //     },
+        //     arrows: false,
+        //     slidesToShow: 1,
+        //     slidesToScroll: 1,
+        //     autoplay: true,
+        //     autoplaySpeed: 2000
+        // });
 
         $.fn.isInViewport = function () {
             let elementTop = $(this).offset().top;
@@ -328,7 +332,7 @@
         $(window).scroll(testScroll);
 
         function testScroll() {
-            if ($(".section4").isInViewport()) {
+            if ($(".counter-wrapper").isInViewport()) {
                 $('.counter__number').each(function () {
                     $(this).prop('Counter',0).animate({
                         Counter: $(this).data('count')

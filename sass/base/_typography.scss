@@ -33,7 +33,8 @@ body {
   font-weight: normal;
   letter-spacing: .3rem;
   font-size: 3.5rem;
-
+  animation: moveInBottom 1s ease-out .25s;
+  animation-fill-mode: backwards;
 
   &__bold {
     font-family: $font-heading;
