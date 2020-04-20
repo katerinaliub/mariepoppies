@@ -58,9 +58,11 @@ body {
 .heading-primary {
   font-weight: normal;
   letter-spacing: .3rem;
-  font-size: 3.5rem;
+  font-size: 4rem;
   animation: moveInBottom 1s ease-out .25s;
-  animation-fill-mode: backwards; }
+  animation-fill-mode: backwards;
+  text-align: center;
+  color: #fff; }
   .heading-primary__bold {
     font-family: "Abril-Fatface", "Abril", sans-serif; }
 
@@ -79,6 +81,13 @@ body {
     text-align: right; }
     @media only screen and (max-width: 37.5em) {
       .heading-secondary--right {
+        align-items: center;
+        text-align: center; } }
+  .heading-secondary--left {
+    align-items: flex-start;
+    text-align: left; }
+    @media only screen and (max-width: 37.5em) {
+      .heading-secondary--left {
         align-items: center;
         text-align: center; } }
   @media only screen and (max-width: 37.5em) {
@@ -197,7 +206,7 @@ body {
 
 .gallery {
   display: grid;
-  max-width: 80rem;
+  max-width: 100rem;
   margin: 0 auto;
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: repeat(12, 1fr);
@@ -209,7 +218,7 @@ body {
     -o-object-fit: cover;
     object-fit: cover; }
   .gallery__item {
-    max-height: 30rem;
+    max-height: 35rem;
     overflow: hidden; }
     .gallery__item--1 {
       grid-row: 1 / 2;
@@ -651,17 +660,17 @@ body {
   align-items: center; }
   .section1__text-box {
     position: absolute;
-    max-width: 80rem;
-    top: calc(50% + 85px);
-    transform: translateY(-50%); }
+    width: 70rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
     @media only screen and (max-width: 75em) {
       .section1__text-box {
-        top: calc(50% + 65px);
-        left: 5%; } }
+        top: calc(50% + 65px); } }
     @media only screen and (max-width: 37.5em) {
       .section1__text-box {
         top: calc(50% + 37.5px);
-        right: 5%;
+        width: 90%;
         max-width: unset;
         text-align: center; } }
 
@@ -675,51 +684,45 @@ body {
       padding: 1.5rem 0; } }
 
 .main-info {
-  display: flex; }
-  @media only screen and (max-width: 56.25em) {
+  display: flex;
+  align-items: center; }
+  @media only screen and (max-width: 37.5em) {
     .main-info {
-      flex-direction: column; } }
+      text-align: left;
+      flex-direction: column-reverse; } }
   .main-info__left {
     flex-basis: 50%;
-    background-image: url("../assets/img/roses-in-basket.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 50%; }
+    border: 3px solid #EEAA9C;
+    position: relative;
+    margin-left: 5rem; }
     @media only screen and (max-width: 56.25em) {
       .main-info__left {
-        display: none; } }
+        margin-left: 3rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .main-info__left {
+        margin-left: 0; } }
+  .main-info__img {
+    position: relative;
+    top: -5rem;
+    right: 5rem; }
+    @media only screen and (max-width: 56.25em) {
+      .main-info__img {
+        top: -3rem;
+        right: 3rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .main-info__img {
+        top: 0;
+        right: 0;
+        padding: 1.5rem; } }
   .main-info__right {
     flex-basis: 50%;
-    background-color: #f9f9f9;
-    padding: 4rem 4rem 4rem 7rem;
-    margin: 50px 0;
-    position: relative;
-    z-index: 1; }
+    padding: 0 7rem 4rem 4rem; }
     @media only screen and (max-width: 56.25em) {
       .main-info__right {
-        margin: 0;
-        padding: 3rem;
-        background-image: url("../assets/img/roses-in-basket.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: 50% 50%;
-        color: #fff; } }
-    @media only screen and (max-width: 56.25em) {
-      .main-info__right > * {
-        position: relative;
-        z-index: 10; } }
-    @media only screen and (max-width: 56.25em) {
-      .main-info__right:before {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(51, 51, 51, 0.6); } }
+        padding: 0 4rem 2rem 2rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .main-info__right {
+        padding: 2rem; } }
 
 .section3 {
   margin-bottom: 10rem; }

@@ -1,6 +1,6 @@
 .gallery {
   display: grid;
-  max-width: 80rem;
+  max-width: 100rem;
   margin: 0 auto;
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: repeat(12, 1fr);
@@ -15,7 +15,7 @@
   }
 
   &__item {
-    max-height: 30rem;
+    max-height: 35rem;
     overflow: hidden;
     &--1 {
       grid-row: 1 / 2;

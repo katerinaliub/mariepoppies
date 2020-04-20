@@ -22,18 +22,20 @@
 
   &__text-box {
     position: absolute;
-    max-width: 80rem;
-    top: calc(50% + 85px);
-    transform: translateY(-50%);
+    width: 70rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
     @include respond(tab-land) {
       top: calc(50% + 65px);
-      left: 5%;
+      //left: 5%;
     }
 
     @include respond(phone) {
       top: calc(50% + 37.5px);
-      right: 5%;
+      //right: 5%;
+      width: 90%;
       max-width: unset;
       text-align: center;
     }
@@ -53,61 +55,56 @@
 
 .main-info {
   display: flex;
+  align-items: center;
 
-  @include respond(tab-port) {
-    flex-direction: column;
+  @include respond(phone) {
+    text-align: left;
+    flex-direction: column-reverse;
   }
 
   &__left {
     flex-basis: 50%;
-    background-image: url('../assets/img/roses-in-basket.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
+    border: 3px solid $color-primary;
+    position: relative;
+    margin-left: 5rem;
 
     @include respond(tab-port) {
-      display: none;
+      margin-left: 3rem;
+    }
+
+    @include respond(phone) {
+      margin-left: 0;
+    }
+
+  }
+
+  &__img {
+    position: relative;
+    top: -5rem;
+    right: 5rem;
+
+    @include respond(tab-port) {
+      top:-3rem;
+      right: 3rem;
+    }
+
+    @include respond(phone) {
+      top: 0;
+      right: 0;
+      padding: 1.5rem;
     }
   }
 
   &__right {
     flex-basis: 50%;
-    background-color: $color-grey-light-2;
-    padding: 4rem 4rem 4rem 7rem;
-    margin: 50px 0;
-    position: relative;
-    z-index: 1;
+    padding: 0 7rem 4rem 4rem;
 
     @include respond(tab-port) {
-      margin: 0;
-      padding: 3rem;
-      background-image: url('../assets/img/roses-in-basket.jpg');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
-      color: $color-white;
+      padding: 0 4rem 2rem 2rem;
     }
 
-    & > * {
-      @include respond(tab-port) {
-        position: relative;
-        z-index: 10;
-      }
-    }
-
-    &:before {
-      @include respond(tab-port) {
-        content: "";
-        display: block;
-        position: absolute;
-        top:0;
-        bottom: 0;
-        left:0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba($color-text, .6);
-      }
+    @include respond(phone) {
+      padding: 2rem;
     }
   }
 }

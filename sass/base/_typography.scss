@@ -32,9 +32,11 @@ body {
 .heading-primary {
   font-weight: normal;
   letter-spacing: .3rem;
-  font-size: 3.5rem;
+  font-size: 4rem;
   animation: moveInBottom 1s ease-out .25s;
   animation-fill-mode: backwards;
+  text-align: center;
+  color: $color-white;
 
   &__bold {
     font-family: $font-heading;
@@ -55,6 +57,16 @@ body {
   &--right {
     align-items: flex-end;
     text-align: right;
+
+    @include respond(phone) {
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  &--left {
+    align-items: flex-start;
+    text-align: left;
 
     @include respond(phone) {
       align-items: center;
