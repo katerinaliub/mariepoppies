@@ -2,6 +2,18 @@
   list-style: none;
   font-size: 1.4rem;
 
+  @include respond(tab-port) {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1500;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: .8s all;
+  }
+
   @include respond(phone) {
     display: none;
   }
@@ -12,6 +24,14 @@
 
     &:not(:first-child) {
       margin-left: 1.5rem;
+    }
+
+    &--mobile {
+      display: none;
+
+      @include respond(tab-port) {
+        display: inline-block;
+      }
     }
   }
 

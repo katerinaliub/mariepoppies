@@ -6,7 +6,6 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-<!--    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>-->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" type="image/png" href="assets/img/logo.png">
@@ -16,31 +15,42 @@
 <body>
     <header class="header">
         <div class="header__wrap">
-            <div class="header__info">A propos Fleuristes Producteurs</div>
+            <div class="header__nav header__nav--left">
+                <div class="navigation">
+                    <input type="checkbox" class="navigation__checkbox" id="nav-toggle">
+                    <label for="nav-toggle" class="navigation__button">
+                        <span class="navigation__icon">&nbsp;</span>
+                    </label>
+                    <ul class="nav navigation__nav">
+                        <li class="nav__item">
+                            <a href="#" data-scroll class="nav__link">A propos</a>
+                        </li>
+                        <li class="nav__item">
+                        <a href="#" data-scroll class="nav__link">Fleuristes</a>
+                    </li>
+                        <li class="nav__item">
+                            <a href="#" data-scroll class="nav__link">Producteurs</a>
+                        </li>
+                        <li class="nav__item nav__item--mobile">
+                            <a href="#contact" data-scroll class="nav__link">Contact</a>
+                        </li>
+                        <li class="nav__item nav__item--mobile">
+                            <a href="#" data-scroll class="nav__link">E-shop</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
             <img src="assets/img/logo.png" alt="Logo" class="header__logo"/>
             <div class="header__nav">
                 <ul class="nav">
                     <li class="nav__item">
-                        <a href="#contact" data-scroll class="nav__link">Contacts</a>
+                        <a href="#contact" data-scroll class="nav__link">Contact</a>
                     </li>
+
                     <li class="nav__item">
-                        <ul class="social-media social-media--nav">
-                            <li class="social-media__item">
-                                <a href="https://www.facebook.com/MariePoppiesinBelgium/" target="_blank" class="social-media__link">
-                                    <svg class="social-media__icon">
-                                        <use xlink:href="assets/img/sprite.svg#icon-facebook"> </use>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="social-media__item">
-                                <a href="https://www.instagram.com/mariepoppiesinbelgium/" target="_blank" class="social-media__link">
-                                    <svg class="social-media__icon">
-                                        <use xlink:href="assets/img/sprite.svg#icon-instagram"> </use>
-                                    </svg>
-                                </a>
-                            </li>
-                        </ul>
+                        <a href="#" data-scroll class="nav__link">E-shop</a>
                     </li>
+
                 </ul>
             </div>
         </div>
@@ -249,13 +259,6 @@
                 </div>
         </section>
 
-<!--        <section class="section7">-->
-<!--            <div class="row">-->
-<!--                <div id="map" class="map">-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </section>-->
-
         <a href="#" id="scroll-up" data-scroll class="scroll-up">
             <svg class="scroll-up__icon">
                 <use xlink:href="assets/img/sprite.svg#icon-chevron-up"> </use>
@@ -293,30 +296,12 @@
             src="https://code.jquery.com/jquery-3.4.1.min.js"
             integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
             crossorigin="anonymous"></script>
-<!--    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>-->
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@16.1.2/dist/smooth-scroll.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
-
-    <!--    <script async defer-->
-<!--            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_LV-s5n77qINLpBowXqSNDuvu8QjQmxg&callback=initMap">-->
-<!--    </script>-->
 
     <script>
         new SmoothScroll('a[href*="#"]');
         AOS.init();
-
-        // $("#hiw-slider").slick({
-        //     dots: true,
-        //     customPaging: function(slider, i) {
-        //         return '<button class="tab hiw__button">' + $(slider.$slides[i]).attr('title') + '<i class="fa fa-sort-asc"></i></button>';
-        //     },
-        //     arrows: false,
-        //     slidesToShow: 1,
-        //     slidesToScroll: 1,
-        //     autoplay: true,
-        //     autoplaySpeed: 2000
-        // });
 
         $.fn.isInViewport = function () {
             let elementTop = $(this).offset().top;
@@ -351,21 +336,6 @@
                 $('#scroll-up').fadeOut();
             }
         }
-
-
-        // function initMap() {
-        //     var geocoder = new google.maps.Geocoder();
-        //     var address = "1 Rue du Château";
-        //
-        //     geocoder.geocode( { 'address': address}, function(results, status) {
-        //         var latitude = results[0].geometry.location.lat();
-        //         var longitude = results[0].geometry.location.lng();
-        //         var location = {lat: latitude, lng: longitude};
-        //         var map = new google.maps.Map(
-        //             document.getElementById('map'), {zoom: 15, center: location});
-        //         var marker = new google.maps.Marker({position: location, map: map});
-        //     });
-        // }
 
     </script>
 

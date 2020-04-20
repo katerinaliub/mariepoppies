@@ -1,0 +1,114 @@
+.navigation {
+  &__nav {
+    @include respond(tab-port) {
+      display: block;
+      height: 100vh;
+      width: 90%;
+      position: fixed;
+      top: 0;
+      right: 10%;
+      z-index: 1500;
+      opacity: 0;
+      transform: translateX(-100%);
+      transition: .8s all;
+    }
+  }
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__button {
+    display: none;
+    height: 5rem;
+    width: 5rem;
+    text-align: center;
+    cursor: pointer;
+
+    @include respond(tab-port) {
+      position: relative;
+      display: block;
+      z-index: 1501;
+    }
+  }
+
+  &__icon {
+    position: relative;
+    margin-top: 2.5rem;
+    &,
+    &:before,
+    &:after {
+      width: 2.5rem;
+      height: 2px;
+      background-color: $color-text;
+      display: inline-block;
+    }
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all .2s;
+    }
+
+    &:before {
+      top: -.8rem;
+    }
+
+    &:after {
+      top: .8rem;
+    }
+  }
+
+  //functionality
+
+  &__checkbox:checked ~ &__nav {
+    background-color: $color-text;
+    opacity: 1;
+    transform: translateX(0);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  &__checkbox:checked ~  &__nav > .nav__item {
+    opacity: 1;
+    transform: translateX(0);
+    font-size: 2rem;
+
+    &:not(:first-child) {
+      margin-left: 0;
+      margin-top: 3rem;
+    }
+  }
+
+  &__checkbox:checked ~  &__nav > .nav__item .nav__link {
+    color: $color-white;
+  }
+
+  &__checkbox:checked + &__button {
+    position: fixed;
+    right: 10%;
+    top: 0;
+  }
+
+  &__checkbox:checked + &__button &__icon {
+    background-color: transparent;
+  }
+
+  &__checkbox:checked + &__button &__icon:before {
+    top: 0;
+    transform: rotate(135deg);
+    background-color: $color-white;
+  }
+
+  &__checkbox:checked + &__button &__icon:after {
+    top: 0;
+    transform: rotate(-135deg);
+    background-color: $color-white;
+  }
+}
