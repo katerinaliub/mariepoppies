@@ -177,7 +177,14 @@ body {
 
 .counter {
   text-align: center;
-  align-content: center; }
+  align-content: center;
+  width: 25%;
+  justify-content: flex-start;
+  display: flex;
+  flex-direction: column; }
+  @media only screen and (max-width: 37.5em) {
+    .counter {
+      width: auto; } }
   @media only screen and (max-width: 37.5em) {
     .counter:not(:last-child) {
       margin-bottom: 6rem; } }
@@ -187,6 +194,56 @@ body {
   .counter__title {
     font-size: 2.4rem;
     letter-spacing: .8px; }
+
+.gallery {
+  display: grid;
+  max-width: 80rem;
+  margin: 0 auto;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 1.5rem; }
+  .gallery__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover; }
+  .gallery__item {
+    max-height: 30rem;
+    overflow: hidden; }
+    .gallery__item--1 {
+      grid-row: 1 / 2;
+      grid-column: 1 / 5; }
+      .gallery__item--1 .gallery__img {
+        object-position: left; }
+    .gallery__item--2 {
+      grid-row: 1 / 2;
+      grid-column: 5 / 9; }
+      .gallery__item--2 .gallery__img {
+        object-position: left; }
+    .gallery__item--3 {
+      grid-row: 1 / 2;
+      grid-column: 9 / 13; }
+    .gallery__item--4 {
+      grid-row: 2 / 3;
+      grid-column: 1 / 5; }
+    .gallery__item--5 {
+      grid-row: 2 / 3;
+      grid-column: 5 / 8; }
+    .gallery__item--6 {
+      grid-row: 2 / 3;
+      grid-column: 8 / 13; }
+      .gallery__item--6 .gallery__img {
+        object-position: left; }
+    .gallery__item--7 {
+      grid-row: 3 / 4;
+      grid-column: 1 / 5; }
+    .gallery__item--8 {
+      grid-row: 3 / 4;
+      grid-column: 5 / 9; }
+    .gallery__item--9 {
+      grid-row: 3 / 4;
+      grid-column: 9 / 13; }
 
 .form__group:not(:last-child) {
   margin-bottom: 2rem; }
@@ -251,23 +308,20 @@ body {
   justify-content: space-between;
   align-items: center;
   position: relative;
-  outline: none;
-  margin-top: 4rem; }
+  outline: none; }
+  .hiw__slide:not(:first-child) {
+    margin-top: -2rem; }
   @media only screen and (max-width: 37.5em) {
     .hiw__slide {
-      flex-direction: column; } }
+      flex-direction: column; }
+      .hiw__slide:not(:first-child) {
+        margin-top: 5rem; } }
 
 .hiw__left {
   width: 30%; }
-  @media only screen and (max-width: 37.5em) {
-    .hiw__left {
-      width: 100%; } }
 
 .hiw__right {
-  width: 50%; }
-  @media only screen and (max-width: 37.5em) {
-    .hiw__right {
-      width: 100%; } }
+  width: 70%; }
 
 .hiw__step {
   color: #EEAA9C;
@@ -290,12 +344,12 @@ body {
 .hiw__bg-number {
   position: absolute;
   top: 50%;
-  left: 35%;
+  left: 25%;
   z-index: -1;
   overflow: hidden;
   transform: translateY(-50%);
   width: auto;
-  font-size: 16rem;
+  font-size: 10rem;
   font-family: "Abril-Fatface", "Abril", sans-serif;
   color: rgba(238, 170, 156, 0.2); }
   @media only screen and (max-width: 37.5em) {
@@ -335,34 +389,22 @@ body {
     background-color: #EEAA9C; }
 
 .hiw--steps {
-  overflow: hidden; }
+  overflow: hidden;
+  max-width: 80rem;
+  margin: 0 auto; }
 
-.hiw--steps .hiw__slide {
-  margin-top: 0; }
-  @media only screen and (max-width: 37.5em) {
-    .hiw--steps .hiw__slide:not(:first-child) {
-      margin-top: 5rem; } }
-  .hiw--steps .hiw__slide:nth-child(even) {
-    flex-direction: row-reverse; }
-  .hiw--steps .hiw__slide:nth-child(odd) {
-    flex-direction: row; }
-  .hiw--steps .hiw__slide__right {
-    width: 60%; }
-  .hiw--steps .hiw__slide__left {
-    width: 40%; }
+.hiw--steps .hiw__slide:nth-child(even) {
+  flex-direction: row-reverse; }
 
-.hiw--steps .hiw__slide .hiw__right {
-  width: 60%; }
-
-.hiw--steps .hiw__slide .hiw__left {
-  width: 40%; }
+.hiw--steps .hiw__slide:nth-child(odd) {
+  flex-direction: row; }
 
 .hiw--steps .hiw__slide:nth-child(even) .hiw__right {
   text-align: right; }
 
 .hiw--steps .hiw__slide:nth-child(even) .hiw__bg-number {
   left: unset;
-  right: 35%; }
+  right: 25%; }
 
 .hiw--steps .hiw__description,
 .hiw--steps .hiw__step {
@@ -688,7 +730,8 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  position: relative; }
+  position: relative;
+  z-index: 1; }
   @media only screen and (max-width: 37.5em) {
     .section4 {
       padding: 6rem 0; } }
@@ -778,7 +821,10 @@ body {
   margin: 0 auto; }
 
 .section7 {
-  padding: 10rem 0; }
+  padding: 0 0 10rem; }
+  @media only screen and (max-width: 37.5em) {
+    .section7 {
+      padding: 6rem 0 6rem; } }
 
 .map {
   height: 40rem;

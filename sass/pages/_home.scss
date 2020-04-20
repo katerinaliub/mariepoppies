@@ -123,6 +123,7 @@
   background-position: center;
   background-attachment: fixed;
   position: relative;
+  z-index: 1;
 
   @include respond(phone) {
     padding: 6rem 0;
@@ -240,7 +241,11 @@
 }
 
 .section7 {
-  padding: 10rem 0;
+  padding: 0 0 10rem;
+
+  @include respond(phone) {
+    padding: 6rem 0 6rem;
+  }
 }
 
 .map {

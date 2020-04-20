@@ -1,6 +1,14 @@
 .counter {
   text-align: center;
   align-content: center;
+  width: 25%;
+  justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+
+  @include respond(phone) {
+    width: auto;
+  }
 
   &:not(:last-child) {
     @include respond(phone) {
