@@ -70,7 +70,7 @@
             <div class="row">
                 <div class="main-info">
                     <div class="main-info__left">
-                        <img src="assets/img/section2.jpg" alt="Flowers On Table" class="main-info__img u-img-responsive">
+                        <img data-src="assets/img/section2.jpg" alt="Flowers On Table" class="main-info__img u-img-responsive lazy">
                     </div>
                     <div class="main-info__right">
                         <h3 class="heading-secondary heading-secondary--left">À propos de nous</h3>
@@ -131,7 +131,7 @@
 
                     <div class="slide hiw__slide" title="3" data-aos="fade-right" data-aos-offset="100">
                         <div class="hiw__left">
-                            <img src="assets/img/hiw-slider/3.png" alt="Step 3 Image"  class="hiw__image u-img-responsive">
+                            <img src="assets/img/hiw-slider/3.jpg" alt="Step 3 Image"  class="hiw__image u-img-responsive">
                         </div>
                         <div class="hiw__right">
                             <p class="hiw__step">3<sup>ème</sup> ETAPE</p>
@@ -218,7 +218,7 @@
                         <p class="paragraph">Bio Bloom | Bio Brussel | Boekette Flower | Cycle Farmers | De kleur van hier en nu | Duizendblad | Jardin des sens | Moments fleurs | Les Généreuses | Les fleurs de Mag | Le Monde des Milles Couleurs | Village Partenaire</p>
                     </div>
                     <div class="partners__right">
-                        <img src="assets/img/section5.jpg" alt="Flowers On Table" class="partners__image u-img-responsive">
+                        <img data-src="assets/img/section5.jpg" alt="Flowers On Table" class="partners__image u-img-responsive lazy">
                     </div>
                 </div>
             </div>
@@ -228,31 +228,31 @@
             <div class="row">
                 <div class="gallery">
                     <figure class="gallery__item gallery__item--1" data-aos="fade-up" data-aos-offset="100">
-                        <img src="assets/img/team/1.jpg" alt="Gallery image 1" class="gallery__img">
+                        <img data-src="assets/img/team/1.jpg" alt="Gallery image 1" class="gallery__img lazy">
                     </figure>
-                    <figure class="gallery__item gallery__item--2" data-aos="fade-up" data-aos-offset="100" data-aos-delay="100">
-                        <img src="assets/img/team/2.jpg" alt="Gallery image 2" class="gallery__img">
+                    <figure class="gallery__item gallery__item--2" data-aos="fade-up" data-aos-offset="100" data-aos-delay="200">
+                        <img data-src="assets/img/team/2.jpg" alt="Gallery image 2" class="gallery__img lazy">
                     </figure>
-                    <figure class="gallery__item gallery__item--3" data-aos="fade-up" data-aos-offset="100" data-aos-delay="200">
-                        <img src="assets/img/team/3.jpg" alt="Gallery image 3" class="gallery__img">
+                    <figure class="gallery__item gallery__item--3" data-aos="fade-up" data-aos-offset="100" data-aos-delay="400">
+                        <img data-src="assets/img/team/3.jpg" alt="Gallery image 3" class="gallery__img lazy">
                     </figure>
                     <figure class="gallery__item gallery__item--4" data-aos="fade-up" data-aos-offset="100">
-                        <img src="assets/img/team/4.jpg" alt="Gallery image 4" class="gallery__img">
+                        <img data-src="assets/img/team/4.jpg" alt="Gallery image 4" class="gallery__img lazy">
                     </figure>
-                    <figure class="gallery__item gallery__item--5" data-aos="fade-up" data-aos-offset="100" data-aos-delay="100">
-                        <img src="assets/img/team/5.JPG" alt="Gallery image 5" class="gallery__img">
+                    <figure class="gallery__item gallery__item--5" data-aos="fade-up" data-aos-offset="100" data-aos-delay="200">
+                        <img data-src="assets/img/team/5.jpg" alt="Gallery image 5" class="gallery__img lazy">
                     </figure>
-                    <figure class="gallery__item gallery__item--6" data-aos="fade-up" data-aos-offset="100" data-aos-delay="200">
-                        <img src="assets/img/team/6.jpg" alt="Gallery image 6" class="gallery__img">
+                    <figure class="gallery__item gallery__item--6" data-aos="fade-up" data-aos-offset="100" data-aos-delay="400">
+                        <img data-src="assets/img/team/6.jpg" alt="Gallery image 6" class="gallery__img lazy">
                     </figure>
                     <figure class="gallery__item gallery__item--7" data-aos="fade-up" data-aos-offset="100">
-                        <img src="assets/img/team/7.jpg" alt="Gallery image 7" class="gallery__img">
+                        <img data-src="assets/img/team/7.jpg" alt="Gallery image 7" class="gallery__img lazy">
                     </figure>
-                    <figure class="gallery__item gallery__item--8" data-aos="fade-up" data-aos-offset="100" data-aos-delay="100">
-                        <img src="assets/img/team/8.jpg" alt="Gallery image 8" class="gallery__img">
+                    <figure class="gallery__item gallery__item--8" data-aos="fade-up" data-aos-offset="100" data-aos-delay="200">
+                        <img data-src="assets/img/team/8.jpg" alt="Gallery image 8" class="gallery__img lazy">
                     </figure>
-                    <figure class="gallery__item gallery__item--9" data-aos="fade-up" data-aos-offset="100" data-aos-delay="200">
-                        <img src="assets/img/team/9.jpg" alt="Gallery image 9" class="gallery__img">
+                    <figure class="gallery__item gallery__item--9" data-aos="fade-up" data-aos-offset="100" data-aos-delay="400">
+                        <img data-src="assets/img/team/9.jpg" alt="Gallery image 9" class="gallery__img lazy">
                     </figure>
 
                 </div>
@@ -263,7 +263,6 @@
             <div class="bg-video">
                 <video class="bg-video__content" autoplay muted loop>
                     <source src="assets/img/video.mp4" type="video/mp4">
-                    <source src="assets/img/video.webm" type="video/webm">
                     Your browser is not supported!
                 </video>
             </div>
@@ -340,8 +339,12 @@
             crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@16.1.2/dist/smooth-scroll.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.4.0/dist/lazyload.min.js"></script>
 
     <script>
+        var lazyLoadInstance = new LazyLoad({
+            elements_selector: ".lazy"
+        });
         new SmoothScroll('a[href*="#"]');
         AOS.init();
 
