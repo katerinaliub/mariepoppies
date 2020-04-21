@@ -1,13 +1,13 @@
 .container {
-  margin-top: -170px;
+  //margin-top: -96px;
 
-  @include respond(tab-land) {
-    margin-top: -130px;
-  }
-
-  @include respond(phone) {
-    margin-top: -75px;
-  }
+  //@include respond(tab-land) {
+  //  margin-top: -130px;
+  //}
+  //
+  //@include respond(phone) {
+  //  margin-top: -75px;
+  //}
 }
 
 .section1 {
